@@ -1,7 +1,3 @@
-
-
-/*  */
-
 html{
   height: 100%;
 }
@@ -12,6 +8,7 @@ body{
 
 
 }
+
 .head{
   display: flex;
   justify-content: space-between;
@@ -87,6 +84,7 @@ h1{
     }
     img{
       object-fit: contain;
+      width: -webkit-fill-available;
     }
   }
   display: flex;
@@ -128,7 +126,7 @@ padding: 10px;
 .tri_divs_after{
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
+  padding: 20px;
   div{
     width: 30%;
     height: 400px;
@@ -141,6 +139,10 @@ padding: 10px;
 .lst_grids{
   display: flex;
   flex-direction: row;
+  
+  .lft_lst_grids .cnt_us_btn{
+    
+  }
 
   .rgt_lst_grids .cnt_us_btn{
     display: none;
@@ -149,18 +151,18 @@ padding: 10px;
 }
 
 .lft_lst_grids, .rgt_lst_grids{
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  justify-content:space around;
+  padding: 1%;
 
+  .big img{
+    width: -webkit-fill-available;
+  }
 }
-
-.big{
-  /* height: 50%; */
   
-}
 
-.small{
-  /* height: 30%; */
-}
 
 .long_line{
   display: inline-block;
@@ -175,6 +177,7 @@ padding: 10px;
 @media(max-width: 600px) {
   .head_right{
     a{
+      color: aqua;
       display: none;
       opacity: 10%;
     }

@@ -7,6 +7,11 @@ import mySvg from "./images/sitelogo.svg";
 
 function App() {
     console.log(window.innerHeight, window.innerWidth)
+    const mistyle = {"flex-grow": "1",
+    display: "flex",
+    "flex-direction": "column",
+    "align-items": "flex-start",
+    "justify-content": "space-around"}
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -37,8 +42,8 @@ function App() {
           </div>
           <div className='image_in_between'><img src={require("./images/hero-image.webp")} alt='' /> </div>
           <div>
-            <image className='main_pic'></image>
-            <image className='Bottm_ribbon'></image>
+            {/* <image className='main_pic'></image>
+            <image className='Bottm_ribbon'></image> */}
           </div>
           <div className='img_text_grid'>
             <div>
@@ -97,7 +102,7 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
                 <img src={require("./images/work-1.webp")} alt='' />
               
               </div>
-              <div className='big'>
+              <div className='big' style={mistyle}>
                 <div className='small'>
                   Villa Furnishing & Interior
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.
