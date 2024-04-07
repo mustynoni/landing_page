@@ -13,7 +13,6 @@ body{
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  padding-left: 5%;
 }
 
 .head_left{
@@ -27,7 +26,6 @@ body{
   a{
     padding: 20pt;
   }
-  padding-right: 5%;
 }
 
 .cnt_us_btn{
@@ -42,7 +40,7 @@ body{
   padding-block: 20px;
   text-align: center;
   h1{
-    font-size: 60px;
+    font-size: 72px;
     font-weight: 100;
   }
 }
@@ -53,6 +51,14 @@ body{
     width: 100%;
     object-fit: contain;
   }
+}
+
+.roundsvg{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 65px;
+  left: 65px;
 }
 
 a{
@@ -183,8 +189,23 @@ padding: 10px;
     }
   }
 
+  .top_div{
+    h1{
+      font-size: 48px;
+    }
+  }
+
   .image_in_between{
     object-fit: contain;
+  }
+
+  .roundsvg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    left: 0;
+    margin-top: -50px;
   }
 
   .img_text_grid{

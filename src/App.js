@@ -4,6 +4,7 @@ import './App.css';
 // import Footer from './components/footer';
 import { ReactSVG } from "react-svg";
 import mySvg from "./images/sitelogo.svg";
+import roundsvg from "./images/cta-button-487f725c7d7d0729437bd09dc6f9b120.svg";
 
 function App() {
     console.log(window.innerHeight, window.innerWidth)
@@ -27,10 +28,10 @@ function App() {
         <header className='head'> 
           <div className='head_left'><ReactSVG src= {mySvg} /></div>
           <div className='head_right'>
-            <a>About</a>
-            <a>Services</a>
-            <a>Our Work</a>
-            <button className='cnt_us_btn'> CONTACT US</button>
+            <a href='/About'>About</a>
+            <a href='/service'>Services</a>
+            <a href='/our_works'>Our Work</a>
+            <button className='cnt_us_btn' onClick={''}> CONTACT US</button>
           </div>
         </header>
 
@@ -40,7 +41,7 @@ function App() {
             <section>We turn your empty house to a lovely home, making the compact spaces with sapce saving <br/>furnitures. Making the unique tastes of yours into reality!</section>
           
           </div>
-          <div className='image_in_between'><img src={require("./images/hero-image.webp")} alt='' /> </div>
+          <div className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/hero-image.webp")} alt='' /> </div>
           <div>
             {/* <image className='main_pic'></image>
             <image className='Bottm_ribbon'></image> */}
@@ -48,7 +49,7 @@ function App() {
           <div className='img_text_grid'>
             <div>
               <span className='abtulin'><span className='line'></span> ABOUT US</span>
-              <h1>We help to bring your <br/><span>dream home</span> to reality</h1>
+              <h2>We help to bring your <br/><span>dream home</span> to reality</h2>
               <span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.
               </span>
