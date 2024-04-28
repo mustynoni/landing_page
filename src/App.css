@@ -8,11 +8,16 @@ body{
 
 
 }
+a{
+  text-decoration: black;
+}
 
 .head{
   display: flex;
   justify-content: space-between;
   padding: 15px;
+  padding-inline: 5%;
+
 }
 
 .head_left{
@@ -39,9 +44,23 @@ body{
 .top_div{
   padding-block: 20px;
   text-align: center;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+
   h1{
     font-size: 72px;
     font-weight: 100;
+    max-width: 75%;
+    margin-block: 25px;
+
+  }
+  section{
+    line-height: 2;
+    font-size: 15;
+    line-height: 2;
+    font-size: 12pt;
+    max-width: 780px;
   }
 }
 
@@ -59,6 +78,7 @@ body{
   position: relative;
   top: 65px;
   left: 65px;
+  margin-top: -50px;
 }
 
 a{
@@ -192,6 +212,9 @@ padding: 10px;
   .top_div{
     h1{
       font-size: 48px;
+    }
+    section{
+      max-width: 85%;
     }
   }
 

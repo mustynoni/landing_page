@@ -38,7 +38,7 @@ function App() {
         <body>
           <div className='top_div'>
             <h1>Make <span>your home</span> an ode to joy</h1>
-            <section>We turn your empty house to a lovely home, making the compact spaces with sapce saving <br/>furnitures. Making the unique tastes of yours into reality!</section>
+            <section>We turn your empty house to a lovely home, making the compact spaces with sapce saving furnitures. Making the unique tastes of yours into reality!</section>
           
           </div>
           <div className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/hero-image.webp")} alt='' /> </div>
