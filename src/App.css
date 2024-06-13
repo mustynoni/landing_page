@@ -15,8 +15,9 @@ a{
 .head{
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  padding-inline: 5%;
+  padding: 10px; 
+  padding-inline: 3%;
+  align-items: center;
 
 }
 
@@ -24,14 +25,19 @@ a{
   display:flex;
   justify-content: space-between;
   position: relative;
-  left: 1%;
+  left: 1%; 
+  height: 50px;
+}
+.head_right{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.head_right{
-  a{
-    padding: 20pt;
+.head_right a{
+    padding: 1rem;
+
   }
-}
+
 
 .cnt_us_btn{
   background-color: rgb(157, 101, 16);
@@ -49,23 +55,39 @@ a{
     align-items: center;
 
   h1{
-    font-size: 72px;
+    font-size: 4rem;
     font-weight: 100;
     max-width: 75%;
     margin-block: 25px;
 
   }
   section{
+    font-size: 20px;
+    font-family: Outfit, sans-serif;
     line-height: 2;
     font-size: 15;
     line-height: 2;
-    font-size: 12pt;
     max-width: 780px;
   }
 }
+h1{
+  font-size: 72px;
+  font-weight: 100;
+  margin-block: 25px;
+  font-family: Playfair Display, sans-serif;
+  
 
+}
+section{
+  line-height: 2;
+  font-size: 15;
+  line-height: 2;
+  font-size: 12pt;
+  
+}
 .image_in_between{
   height: 40%;
+  overflow: hidden;
   img{
     width: 100%;
     object-fit: contain;
@@ -92,16 +114,23 @@ h1{
   font-size: 35pt;
 }
 .img_text_grid{
-  div{
-    
-    width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  color: #1e1e1f;
+  font-size: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  container-type: inline-size;
+  container-name: img_text;
+
+  div{  
+    width: 46%;
+    min-width: 350px;
     background-color: antiquewhite;
-    border-color: #1e1e1f;
-    border-width: 2px;
-    padding:2%;
-    border-style: groove;
+    padding: 2%;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     span{
       /* font-size: 16pt; */
@@ -113,11 +142,13 @@ h1{
       width: -webkit-fill-available;
     }
   }
-  display: flex;
-  align-content: space-evenly;
-  color: #1e1e1f;
-  font-size: 10px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@container img_text (max-width: 800px) {
+  .img_text_grid{div{
+    width: 100%;
+    padding-inline: 8%;
+  }}
   
 }
 section{
@@ -139,14 +170,56 @@ section{
   font-weight: bold;
 }
 .under_text_img{
-padding: 10px;
+  container-type: inline-size;
+  container-name: under_img_txt;
+  padding: 10px;
   display:  flex;
   align-items: center;
   flex-direction: row;
-  align-content: space-evenly;
+  justify-content: space-between;
   div{
-    width:33%
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    span{
+      font-size:60px;
+    }
+    p{
+      font-size: medium;
+      text-wrap: balance;
+      
+    }
   }
+}
+@media (max-width: 600px) {
+  .head{
+    /* width: -webkit-fill-available;
+    object-fit: contain;
+     */
+  }
+  .under_text_img{
+    flex-direction: column;
+  }
+  .head{
+    display: flex;
+    justify-content: space-between;
+    padding:0%;
+    margin: 0%;
+    position: relative;
+    width: 70%;
+    background-color: aqua;
+    object-fit: scale-down;
+  }
+  .head_right a{
+      display: none;
+  
+    }
+
+    .cnt_us_btn {
+      font-size: 0.8rem; /* Adjust as necessary */
+      padding: 0.4rem 0.8rem;
+    }
+  
 }
 
 .tri_divs_after{
@@ -165,6 +238,7 @@ padding: 10px;
 .lst_grids{
   display: flex;
   flex-direction: row;
+  padding-inline: 10vw;
   
   .lft_lst_grids .cnt_us_btn{
     
@@ -182,11 +256,11 @@ padding: 10px;
   width: 49%;
   justify-content:space around;
   padding: 1%;
-
+}
   .big img{
     width: -webkit-fill-available;
   }
-}
+
   
 
 
@@ -200,18 +274,15 @@ padding: 10px;
 
 }
 
-@media(max-width: 600px) {
-  .head_right{
-    a{
-      color: aqua;
-      display: none;
-      opacity: 10%;
-    }
+@media(max-width: 750px) {
+
+  .head{
+    width: 100%;
   }
 
   .top_div{
     h1{
-      font-size: 48px;
+      font-size: 3rem;
     }
     section{
       max-width: 85%;
@@ -221,6 +292,10 @@ padding: 10px;
   .image_in_between{
     object-fit: contain;
   }
+  .image_in_between img{
+    width: 150%;
+    margin-inline: -50%;
+  }
 
   .roundsvg{
     display: flex;
@@ -228,25 +303,45 @@ padding: 10px;
     width: 100%;
     height: auto;
     left: 0;
-    margin-top: -50px;
+    margin-top: -55px;
+    scale:0.9;
   }
 
   .img_text_grid{
+    padding-inline: 0px;
     display: flex;
-    flex-direction: column;
+
+    flex-wrap: wrap;
+
     div{
       width:100%;
+      min-width: 200px;
+    }
+  }
+  .img_text_grid div img{
+    display: flex;
+    width: -webkit-fill-available;
+    width: 100%;
+    align-items: center;
+  }
 
-      img{
-        align-items: center;
-        width: -webkit-fill-available;
+  .under_text_img{
+    
+    align-items: flex-start;
+    div{
+      span{
+        min-width: 140px;
+        font-size:60px;
+      }
+      p{
+        font-size: medium;
+        text-wrap: balance;
+
       }
     }
   }
 
-  img{
-    width: 100%;
-  }
+
 
   .tri_divs_after{
     flex-direction: column;

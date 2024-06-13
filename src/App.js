@@ -3,16 +3,23 @@ import './App.css';
 // import Body from './components/body';
 // import Footer from './components/footer';
 import { ReactSVG } from "react-svg";
-import mySvg from "./images/sitelogo.svg";
+// import mySvg from "./images/sitelogo.svg";
 import roundsvg from "./images/cta-button-487f725c7d7d0729437bd09dc6f9b120.svg";
+import Services from './components/Services';
+import About from './components/About';
+import Pricing from './components/Pricing';
+import OurWorks from './components/OurWorks';
+
 
 function App() {
     console.log(window.innerHeight, window.innerWidth)
-    const mistyle = {"flex-grow": "1",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "flex-start",
-    "justify-content": "space-around"}
+    const a= [window.innerHeight, window.innerWidth]
+    // const mistyle = {"flex-grow": "1",
+    //   display: "flex",
+    //   "flex-direction": "column",
+    //   "align-items": "flex-start",
+    //   "justify-content": "space-around"
+    // }
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -26,15 +33,17 @@ function App() {
       </footer> */}
       <>
         <header className='head'> 
-          <div className='head_left'><ReactSVG src= {mySvg} /></div>
+          <div className='head_left'>
+            {/* <ReactSVG src= {mySvg} /> */}
+            <img src= {require('./images/Quality Clean2.png')} alt='logo'></img>
+          </div>
           <div className='head_right'>
             <a href='/About'>About</a>
             <a href='/service'>Services</a>
-            <a href='/our_works'>Our Work</a>
+            <a href='/our_works'>Pricing</a>
             <button className='cnt_us_btn' onClick={''}> CONTACT US</button>
           </div>
         </header>
-
         <body>
           <div className='top_div'>
             <h1>Make <span>your home</span> an ode to joy</h1>
@@ -46,38 +55,41 @@ function App() {
             {/* <image className='main_pic'></image>
             <image className='Bottm_ribbon'></image> */}
           </div>
-          <div className='img_text_grid'>
+          {/* <div className='img_text_grid'>
             <div>
               <span className='abtulin'><span className='line'></span> ABOUT US</span>
-              <h2>We help to bring your <br/><span>dream home</span> to reality</h2>
-              <span>
+              <h1>We help to bring your <br/><span>dream home</span> to reality</h1>
+              <section>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.
-              </span>
-              <span>
+              </section>
+              <section>
                 Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.
-              </span>
-              
+              </section>
             </div>
+
             <div>
+            
             <img src={require("./images/about-creative.webp")} alt='' />
             </div>
           </div>
           <div className='under_text_img'>
-            <div>100%
-              SATISFITATION
-              CLIENTS
+            <div><span>100%</span>
+              <p>SATISFITATION <br/> CLIENTS</p>
             </div>
-            <div>250
-              EMPLOYEES ON 
-              WORLDWIDE</div>
-            <div>3469 PROJECTS COMPLETED ON 60 COUNTRIES</div>
-          </div>
-          <section className='long_line'></section>
-          <div>
+            <div><span>250</span>
+              <p>EMPLOYEES ON<br/> WORLDWIDE</p></div>
+            <div><span>3469</span><p>PROJECTS COMPLETED <br/>ON 60 COUNTRIES</p> </div>
+          </div> */}
+          {/* <section className='long_line'></section> */}
+          <About />
+          <Services />
+          <Pricing />
+          {/* <div>
             <span className='abtulin'><span className='line'></span> OUR SERVICES</span>
             <h1>We provide the <span>best solutions</span> for your dream home</h1>
             
           </div>
+         
           <div className='tri_divs_after'>
               <div>Architectural & Interior design
 
@@ -89,9 +101,9 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
 
 Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</div>
               
-          </div>
+          </div> */}
 
-          <div className='lst_grids'>
+          {/* <div className='lst_grids'>
 
             <div className='lft_lst_grids'>
               <div className='big'>
@@ -135,7 +147,8 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
                 <button className='cnt_us_btn'> CONTACT US</button>
               </div>
             </div>
-          </div>
+          </div> */}
+          <OurWorks />
         </body>
 
       </>
