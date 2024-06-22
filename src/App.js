@@ -14,6 +14,7 @@ import OurWorks from './components/OurWorks';
 function App() {
     console.log(window.innerHeight, window.innerWidth)
     const a= [window.innerHeight, window.innerWidth]
+    console.log(a)
     // const mistyle = {"flex-grow": "1",
     //   display: "flex",
     //   "flex-direction": "column",
@@ -22,35 +23,26 @@ function App() {
     // }
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <Head />
-      </header>
-      <body className='App-body'>
-        <Body />
-      </body>
-      <footer className='App-footer'>
-        <Footer />
-      </footer> */}
       <>
-        <header className='head'> 
-          <div className='head_left'>
+        <header className='head' id='head'> 
+          <div className='head_left' onClick={(e)=>{"window.location='http://google.com';"}}>
             {/* <ReactSVG src= {mySvg} /> */}
             <img src= {require('./images/Quality Clean2.png')} alt='logo'></img>
           </div>
           <div className='head_right'>
-            <a href='/About'>About</a>
-            <a href='/service'>Services</a>
-            <a href='/our_works'>Pricing</a>
-            <button className='cnt_us_btn' onClick={''}> CONTACT US</button>
+            <a href='#About'>About</a>
+            <a href='#services'>Services</a>
+            <a href='#pricing'>Pricing</a>
+            <button type='button' className='cnt_us_btn' onClick={(e)=>{e.preventDefault(); window.location="mailto:someone@example.com"}}> CONTACT US</button>
           </div>
         </header>
         <body>
           <div className='top_div'>
-            <h1>Make <span>your home</span> an ode to joy</h1>
-            <section>We turn your empty house to a lovely home, making the compact spaces with sapce saving furnitures. Making the unique tastes of yours into reality!</section>
+            <h1>Come <span>home</span> to a clean enviroment</h1>
+            <section><p>We clean it all so you don't have to go through the stress, making your comfort spaces even more comforting. let save you the hussle by doing all the cleaning.</p></section>
           
           </div>
-          <div className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/hero-image.webp")} alt='' /> </div>
+          <section className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/door_welcome.jpg")} alt='' /> </section>
           <div>
             {/* <image className='main_pic'></image>
             <image className='Bottm_ribbon'></image> */}
@@ -150,6 +142,10 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
           </div> */}
           <OurWorks />
         </body>
+        <footer>
+          
+          
+        </footer>
 
       </>
     </div>
