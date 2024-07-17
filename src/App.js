@@ -9,11 +9,15 @@ import Services from './components/Services';
 import About from './components/About';
 import Pricing from './components/Pricing';
 import OurWorks from './components/OurWorks';
+import Footer from './components/Footer';
+import { useState } from 'react';
+import Contactmodal from './components/Contactmodal';
 
 
 function App() {
     console.log(window.innerHeight, window.innerWidth)
     const a= [window.innerHeight, window.innerWidth]
+    const [isModalOpen, setModalOpen] = useState(false);
     console.log(a)
     // const mistyle = {"flex-grow": "1",
     //   display: "flex",
@@ -33,7 +37,7 @@ function App() {
             <a href='#About'>About</a>
             <a href='#services'>Services</a>
             <a href='#pricing'>Pricing</a>
-            <button type='button' className='cnt_us_btn' onClick={(e)=>{e.preventDefault(); window.location="mailto:someone@example.com"}}> CONTACT US</button>
+            <button type='button' className='cnt_us_btn' onClick={() => setModalOpen(true)}> CONTACT US</button>
           </div>
         </header>
         <body>
@@ -42,11 +46,25 @@ function App() {
             <section><p>We clean it all so you don't have to go through the stress, making your comfort spaces even more comforting. let save you the hussle by doing all the cleaning.</p></section>
           
           </div>
-          <section className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/door_welcome.jpg")} alt='' /> </section>
+          <section className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/top_div_img.jpg")} alt='' /> </section>
           <div>
             {/* <image className='main_pic'></image>
             <image className='Bottm_ribbon'></image> */}
           </div>
+
+
+          
+      <Contactmodal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2>CONTACT US</h2>
+        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', padding:'20px'}}>
+          <span className='cnt_us_icon'><a href='mailto:someone@example.com'><img src={require('./images/email.png')} alt = 'Phone'></img></a></span> 
+          <span className='cnt_us_icon'><a href='wa.link'><img style ={{width:'88%', 'padding-inline':'10px'}}  src={require('./images/whatsapp-logo.png')} alt = 'Whatsapp'></img></a></span> 
+          <span className='cnt_us_icon'><a href='tel:07590228369'><img style ={{width:'80%', 'padding-inline':'10px'}} src={require('./images/phone.png')} alt = 'Email'></img></a></span> 
+        </div>
+        
+
+      </Contactmodal>
+
           {/* <div className='img_text_grid'>
             <div>
               <span className='abtulin'><span className='line'></span> ABOUT US</span>
@@ -142,10 +160,7 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
           </div> */}
           <OurWorks />
         </body>
-        <footer>
-          
-          
-        </footer>
+        {/* <Footer /> */}
 
       </>
     </div>

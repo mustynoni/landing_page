@@ -4,7 +4,7 @@ import '../App.css';
 export default function Services() {
   return (
     <>
-        <div id='services'>
+        <div className='services' id='services'>
             <span className='abtulin'><span className='line'></span> OUR SERVICES</span>
             <h2>We provide the <span>best solutions</span> for your dream home</h2>
 

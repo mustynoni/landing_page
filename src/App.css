@@ -148,6 +148,15 @@ h1 span{
   }
 }
 
+.cnt_us_icon{
+  width: 30%;
+  a{
+    img{
+      width: 100%;
+    }
+  }
+}
+
 @container img_text (max-width: 800px) {
   .img_text_grid{div{
     width: 100%;
@@ -196,6 +205,10 @@ section{
   }
 }
 
+.services{
+  padding-top: 2rem;
+
+}
 
 .tri_divs_after{
   display: flex;
