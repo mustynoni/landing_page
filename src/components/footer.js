@@ -1,4 +1,5 @@
 import React from "react";
+import { BiLogoWhatsapp, BiMailSend, BiPhone } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const Footer = ()=>{
@@ -7,31 +8,29 @@ const Footer = ()=>{
         <div className="footer">
             <link></link>
             <section className="fts1">
-                <h3>conatct details</h3>
-                <a>email</a>
+                <h3>About us</h3>
+                <a>services</a>
+                <p>prices</p>
+                <p>FAQ</p>
             </section>
             <section className="fts2">
                 <h3>conatct details</h3>
-                <p></p>
-                <p></p>
-                <p></p>
+                <a style={{display:"flex", alignItems:'center'}}><BiMailSend style={{paddingRight:'5px'}}/> Mail</a>
+                <a style={{display:"flex", alignItems:'center'}}><BiPhone style={{paddingRight:'5px'}}/> Phone</a>
+                <a style={{display:"flex", alignItems:'center'}}><BiLogoWhatsapp style={{paddingRight:'5px'}}/> WhatsApp</a>
             </section>
             <section className="fts3">
-                <h3>conatct details</h3>
+                <h3>Business Opening time</h3>
                 <a></a>
                 <a></a>
                 <a></a>
             </section>
-            <section className="fts4">
+            {/* <section className="fts4">
                 <h3>conatct details</h3>
                 <a></a>
                 <a></a>
                 <a></a>
-            </section>
-            <section>cat1</section>
-            <section>cat2</section>
-            <section>aout</section>
-            <section>contact</section>
+            </section> */}
         </div>
     )
 }

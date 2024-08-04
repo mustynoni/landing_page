@@ -12,7 +12,8 @@ import OurWorks from './components/OurWorks';
 import Footer from './components/Footer';
 import { useState } from 'react';
 import Contactmodal from './components/Contactmodal';
-
+import { BiPhoneCall, BiLogoWhatsapp, BiMailSend } from 'react-icons/bi';
+import { IconContext } from 'react-icons';
 
 function App() {
     console.log(window.innerHeight, window.innerWidth)
@@ -43,7 +44,7 @@ function App() {
         <body>
           <div className='top_div'>
             <h1>Come <span>home</span> to a clean enviroment</h1>
-            <section><p>We clean it all so you don't have to go through the stress, making your comfort spaces even more comforting. let save you the hussle by doing all the cleaning.</p></section>
+            <section><p>We clean it all so you don't have to go through the stress, Making your comfort spaces even more comforting. Let save you the hussle by doing all the cleaning.</p></section>
           
           </div>
           <section className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/top_div_img.jpg")} alt='' /> </section>
@@ -55,14 +56,15 @@ function App() {
 
           
       <Contactmodal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <h2>CONTACT US</h2>
+        <h2 style={{fontSize: '1.5rem'}}>CONTACT US</h2>
         <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', padding:'20px'}}>
-          <span className='cnt_us_icon'><a href='mailto:someone@example.com'><img src={require('./images/email.png')} alt = 'Phone'></img></a></span> 
-          <span className='cnt_us_icon'><a href='wa.link'><img style ={{width:'88%', 'padding-inline':'10px'}}  src={require('./images/whatsapp-logo.png')} alt = 'Whatsapp'></img></a></span> 
-          <span className='cnt_us_icon'><a href='tel:07590228369'><img style ={{width:'80%', 'padding-inline':'10px'}} src={require('./images/phone.png')} alt = 'Email'></img></a></span> 
+          
+          <IconContext.Provider value={{ color: "chocolate", className: "global-class-name", size: "4rem"}} >
+            <span className='cnt_us_icon'><a href='mailto:someone@example.com'><BiMailSend /></a></span> 
+            <span className='cnt_us_icon'><a href='wa.link'><BiLogoWhatsapp /></a></span> 
+            <span className='cnt_us_icon'><a href='tel:07590228369'><BiPhoneCall /></a></span> 
+          </IconContext.Provider>
         </div>
-        
-
       </Contactmodal>
 
           {/* <div className='img_text_grid'>
@@ -91,15 +93,18 @@ function App() {
             <div><span>3469</span><p>PROJECTS COMPLETED <br/>ON 60 COUNTRIES</p> </div>
           </div> */}
           {/* <section className='long_line'></section> */}
+          
           <About />
           <Services />
           <Pricing />
+          <OurWorks />
+          <Footer />
+
           {/* <div>
             <span className='abtulin'><span className='line'></span> OUR SERVICES</span>
             <h1>We provide the <span>best solutions</span> for your dream home</h1>
             
           </div>
-         
           <div className='tri_divs_after'>
               <div>Architectural & Interior design
 
@@ -111,9 +116,8 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
 
 Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</div>
               
-          </div> */}
-
-          {/* <div className='lst_grids'>
+          </div>
+          <div className='lst_grids'>
 
             <div className='lft_lst_grids'>
               <div className='big'>
@@ -157,10 +161,9 @@ Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie vo
                 <button className='cnt_us_btn'> CONTACT US</button>
               </div>
             </div>
-          </div> */}
-          <OurWorks />
+          </div>  */}
+
         </body>
-        {/* <Footer /> */}
 
       </>
     </div>

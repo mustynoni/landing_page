@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {BiChevronRight, BiChevronLeft} from 'react-icons/bi'
+import CleanKitchen from '../images/Clean_kitchen.jpg';
+import CleanDining from '../images/clean_dinning.jpeg';
+
+const Images = (imgLinks, nextimg)=> {
+    console.log(imgLinks, nextimg )
+    return(
+        <>
+            <img src={imgLinks} alt=''></img>
+            <BiChevronLeft onClick={(e)=>{e.preventDefault(); nextimg()}}/>
+            <BiChevronRight onClick={(e)=>{e.preventDefault(); nextimg()}}/>
+        </>
+    )
+}
+
 
 function OurWorks() {
+
+    const [imgLinks, setimgLinks] = useState([CleanKitchen])
+    const nextimg = ()=>{imgLinks===CleanKitchen ? setimgLinks(CleanDining) : setimgLinks(CleanKitchen)}
+
+
   return (
 
     <div className='lst_grids'>
@@ -10,7 +30,9 @@ function OurWorks() {
                 <h2>Some of <span>our works</span><br></br> done with love</h2>
             </div>
             <div className='big'>
-                <img src={require("../images/Clean_kitchen.jpg")} alt='' />
+            <div className='img_container'>
+                <Images imgLinks nextimg/>
+            </div>
                 <div className='small'>
                     <h3>kitchen and Appliances Cleaning</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.</p>
@@ -31,7 +53,11 @@ function OurWorks() {
             </div>
         </div>
         <div className='big'>
-            <img src={require("../images/CHAIR SHELVE.jpg")} alt='' />
+            <div className='img_container'>
+                <img src={require("../images/CHAIR SHELVE.jpg")} alt='' />
+                <BiChevronLeft />
+                <BiChevronRight />
+            </div>
             <div className='small'>
             <h3>Spring and window Cleaning</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.</p>
