@@ -18,6 +18,7 @@
     "react-slideshow-image": "^4.3.1",
     "react-smart-slider": "^0.1.2",
     "react-svg": "^16.1.33",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

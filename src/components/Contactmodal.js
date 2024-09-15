@@ -1,4 +1,5 @@
-
+import { BiPhoneCall, BiLogoWhatsapp, BiMailSend } from 'react-icons/bi';
+import { IconContext } from 'react-icons';
 
 const Contactmodal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -45,6 +46,15 @@ const Contactmodal = ({ isOpen, onClose, children }) => {
       <div style={overlayStyles} onClick={onClose} />
       <div style={modalStyles}>
         <button style={closeButtonStyles} onClick={onClose}>&times;</button>
+        <h2 style={{fontSize: '1.5rem'}}>CONTACT US</h2>
+        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', padding:'20px'}}>
+          
+          <IconContext.Provider value={{ color: "chocolate", className: "global-class-name", size: "4rem"}} >
+            <span className='cnt_us_icon'><a href='mailto:someone@example.com'><BiMailSend /></a></span> 
+            <span className='cnt_us_icon'><a href='wa.link'><BiLogoWhatsapp /></a></span> 
+            <span className='cnt_us_icon'><a href='tel:07590228369'><BiPhoneCall /></a></span> 
+          </IconContext.Provider>
+        </div>
         {children}
       </div>
     </>

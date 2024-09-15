@@ -44,7 +44,7 @@ a{
 
 
 .cnt_us_btn{
-  background-color: rgb(157, 101, 16);
+  background-color: rgb(164, 83, 24);
   border-radius: 5%;
   padding: 10px;
   border-style: none;
@@ -275,6 +275,24 @@ td{
   padding-block: 2rem;
   gap: 3rem;
 }
+button.slick-arrow{
+  opacity: 0.5;
+  z-index: 2;
+}
+button.slick-arrow:hover{
+  opacity: 1;
+}
+
+button.slick-arrow.slick-prev{
+  left: 1%;
+}
+button.slick-arrow.slick-next{
+  right: 1%;
+}
+
+.slick-next{
+  right: 1%;
+}
 
 .lft_lst_grids{
   .big:nth-child(odd){
@@ -335,6 +353,17 @@ td{
   align-items: flex-start;
   background-color:peru;
   height: 30vh;
+  
+  section{
+    min-width: 150px;
+  }
+}
+
+.fts1, .fts2{
+  a{
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media(max-width: 780px) {

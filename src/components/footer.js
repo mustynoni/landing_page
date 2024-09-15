@@ -9,21 +9,21 @@ const Footer = ()=>{
             <link></link>
             <section className="fts1">
                 <h3>About us</h3>
-                <a>services</a>
-                <p>prices</p>
-                <p>FAQ</p>
+                <a href="#">Services</a>
+                <a href="#">Prices</a>
+                <a href="#">FAQ</a>
             </section>
             <section className="fts2">
                 <h3>conatct details</h3>
-                <a style={{display:"flex", alignItems:'center'}}><BiMailSend style={{paddingRight:'5px'}}/> Mail</a>
-                <a style={{display:"flex", alignItems:'center'}}><BiPhone style={{paddingRight:'5px'}}/> Phone</a>
-                <a style={{display:"flex", alignItems:'center'}}><BiLogoWhatsapp style={{paddingRight:'5px'}}/> WhatsApp</a>
+                <a href='#'><BiMailSend style={{paddingRight:'5px'}}/> Mail</a>
+                <a href='#'><BiPhone style={{paddingRight:'5px'}}/> Phone</a>
+                <a href='#'><BiLogoWhatsapp style={{paddingRight:'5px'}}/> WhatsApp</a>
             </section>
             <section className="fts3">
                 <h3>Business Opening time</h3>
-                <a></a>
-                <a></a>
-                <a></a>
+                <p></p>
+                <p></p>
+                <p></p>
             </section>
             {/* <section className="fts4">
                 <h3>conatct details</h3>
