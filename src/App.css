@@ -80,10 +80,9 @@ a{
   section{
     p{
       font-size: 20px;
-    font-family: Outfit, sans-serif;
-    line-height: 2;
-    font-size: 15;
-    line-height: 2;
+      font-family: Outfit, sans-serif;
+      line-height: 2;
+      line-height: 2;
     }
     max-width: 780px;
   }
@@ -98,10 +97,13 @@ h1{
 }
 section{
   line-height: 2;
-  font-size: 15;
   line-height: 2;
   font-size: 12pt;
   
+}
+ul{
+  padding-inline: 12px;
+
 }
 .image_in_between{
   height: 40%;
@@ -156,6 +158,15 @@ a{
       width: -webkit-fill-available;
     }
   }
+}
+
+/* .swiper {
+  width: 600px;
+  height: 300px;
+} */
+.swiper-button-prev, .swiper-button-next{
+  scale: 0.5;
+  color: red;
 }
 
 .cnt_us_icon{
@@ -301,6 +312,7 @@ button.slick-arrow.slick-next{
   }
 
 }
+
  
 .lft_lst_grids, .rgt_lst_grids{
   display: flex;
@@ -352,7 +364,7 @@ button.slick-arrow.slick-next{
   justify-content: space-around;
   align-items: flex-start;
   background-color:peru;
-  height: 30vh;
+  padding-bottom: 10px;
   
   section{
     min-width: 150px;

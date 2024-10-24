@@ -50,10 +50,11 @@ const Contactmodal = ({ isOpen, onClose, children }) => {
         <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', padding:'20px'}}>
           
           <IconContext.Provider value={{ color: "chocolate", className: "global-class-name", size: "4rem"}} >
-            <span className='cnt_us_icon'><a href='mailto:someone@example.com'><BiMailSend /></a></span> 
-            <span className='cnt_us_icon'><a href='wa.link'><BiLogoWhatsapp /></a></span> 
+            <span className='cnt_us_icon' onClick={console.log('mail')}><a href='mailto:someone@example.com'><BiMailSend /></a></span> 
+            <span className='cnt_us_icon'><a href='http://wa.link/di5h5r'><BiLogoWhatsapp /></a></span> 
             <span className='cnt_us_icon'><a href='tel:07590228369'><BiPhoneCall /></a></span> 
           </IconContext.Provider>
+          {/* <input name='number' value={'07590228369'} disabled='true' /> */}
         </div>
         {children}
       </div>

@@ -13,8 +13,8 @@ function Pricing() {
         {name : 'HOTEL CLEANING', price: '£'}
     
     ]
-    const pricelist = prices.map(prices => <tr>
-            <td>{prices.name}</td>
+    const pricelist = prices.map(prices=> <tr key={prices.name}>
+            <td> {prices.name}</td>
             <td>From {prices.price} per hour</td>
         </tr>
     )

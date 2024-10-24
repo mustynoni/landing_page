@@ -1,36 +1,75 @@
-import React, {useState } from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import CleanKitchen from '../images/Clean_kitchen.jpg';
 import CleanDining from '../images/clean_dinning.jpeg';
 import cleanRoom from "../images/cleaned room.jpg";
 import CleanandLandury from"../images/CHAIR SHELVE.jpg"
 import Room from "../images/room.jpg"
 import Palour from "../images/palour.jpg"
-import Bath from "../images/bath.jpg"
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Swipelements from './Swipelements';
 
 
 function OurWorks({ onOpen }) {
 
-        /*
-        create a state that carry's the slide thats changed then state afterchange of the slide to setstate the then on set state let a funcion that switch to the next sliderer image which trigger a after changewhich would have a setimeout that would hold for a few seconds before triggering
-        */
-    const [play, setPlay] = useState([true, false, false])
-    const [settings, setSettings] = useState({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        lazyLoad: true,
-        autoplay: play[0],
-        arrows: true,
-        pauseOnDotsHover: true,
-        pauseOnFocus: true,
+    const swiper1Ref = useRef(null);
+    const swiper2Ref = useRef(null);
+    const swiper3Ref = useRef(null);
+    const [Interacted, setInteracted] = useState(false)
 
-      })
+    const handleInteraction = () => {
+        if (!Interacted) {
+          setInteracted(true); // Set interaction state to true
+        }
+        console.log('interacted', Interacted)
+    }
+
+    useEffect(() => {
+        let swiper1Timer, swiper2Timer, swiper3Timer;
     
+        // Function to start Swiper 1
+        const startSwiper1 = () => {
+          swiper1Timer = setTimeout(() => {
+            if (!Interacted){
+                if (swiper1Ref.current) swiper1Ref.current.slideNext(); // Move to the next slide
+                startSwiper2(); 
+            }
+            // After Swiper 1, start Swiper 2
+          }, 1000); // Start immediately
+        };
+    
+        // Function to start Swiper 2
+        const startSwiper2 = () => {
+          swiper2Timer = setTimeout(() => {
+            if (!Interacted){
+                if (swiper2Ref.current) swiper2Ref.current.slideNext(); // Move to the next slide
+                startSwiper3(); // After Swiper 2, start Swiper 3
+            }
+          }, 1000); // 1.5 seconds delay
+        };
+    
+        // Function to start Swiper 3
+        const startSwiper3 = () => {
+          swiper3Timer = setTimeout(() => {
+            if (!Interacted){
+                if (swiper3Ref.current) swiper3Ref.current.slideNext(); // Move to the next slide
+                startSwiper1(); // After Swiper 3, restart from Swiper 1
+            }
+          }, 1000); // 1.5 seconds delay
+        };
+    
+        // Start the loop by triggering Swiper 1 initially
+        startSwiper1();
+    
+        // Clear timers on component unmount to prevent memory leaks
+        return () => {
+          clearTimeout(swiper1Timer);
+          clearTimeout(swiper2Timer);
+          clearTimeout(swiper3Timer);
+        };
+      }, [Interacted]);
 
   return (
 
@@ -41,10 +80,7 @@ function OurWorks({ onOpen }) {
                 <h2>Some of <span>our works</span><br></br> done with love</h2>
             </div>
             <div className='big'>
-                <Slider {...{...settings, autoplaySpeed:2500}}>
-                    <img src={cleanRoom} alt=''></img>
-                    <img src={Room} alt=''></img>
-                </Slider>
+                <Swipelements images = {[Room, Palour]} swipenexter={swiper1Ref} handleInteraction={handleInteraction}/>
 
                 <div className='small'>
                     <h3>Housekeeping</h3>
@@ -57,11 +93,8 @@ function OurWorks({ onOpen }) {
 
         <div className='rgt_lst_grids'>
         <div className='big'>
-            <Slider {...{...settings, autoplaySpeed:3200}}>
-                <img src={CleanKitchen} alt=''></img>
-                <img src={CleanDining} alt=''></img>
-            </Slider>
-            
+
+            <Swipelements images={[CleanKitchen, CleanDining]} swipenexter={swiper2Ref} handleInteraction={handleInteraction} />
             
             <div className='small'>
             <h3>kitchen and Appliances Cleaning</h3>
@@ -71,11 +104,7 @@ function OurWorks({ onOpen }) {
         <div className='big'>
 
             <div className='big'>
-                <Slider {...{...settings, autoplaySpeed:4000, afterChange: (afterChange)=>{ setSettings({...settings, autoplay:false})}}}>
-                    <img src={CleanandLandury} alt=''></img>
-                    <img src={Palour} alt=''></img>
-                    
-                </Slider>
+                <Swipelements images={[CleanandLandury, Palour]} swipenexter={swiper3Ref} handleInteraction={handleInteraction}/>
             </div>
             <div className='small'>
             <h3>Spring and window Cleaning</h3>
@@ -84,6 +113,7 @@ function OurWorks({ onOpen }) {
             <button className='cnt_us_btn' onClick ={onOpen}> CONTACT US</button>
         </div>
         </div>
+
     </div>
   )
 }

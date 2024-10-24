@@ -1,4 +1,5 @@
 import './App.css';
+import './swiper.css'
 // import Head from './components/head';
 // import Body from './components/body';
 // import Footer from './components/footer';
@@ -15,15 +16,12 @@ import Contactmodal from './components/Contactmodal';
 
 
 function App() {
-    console.log(window.innerHeight, window.innerWidth)
+    // console.log(window.innerHeight, window.innerWidth)
     
     const [isModalOpen, setModalOpen] = useState(false);
     const onClose = () => {setModalOpen(false)}
     const HandleOpen = () => {
-      setTimeout((isModalOpen) => {
-        setModalOpen(true)
-      }, 100);
-    }
+        setModalOpen(true)}
     // const mistyle = {"flex-grow": "1",
     //   display: "flex",
     //   "flex-direction": "column",
@@ -64,6 +62,7 @@ function App() {
           <Services />
           <Pricing />
           <OurWorks onOpen={HandleOpen} />
+          
           <Footer />
 
         </body>
