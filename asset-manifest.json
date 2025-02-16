@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/landing_page/static/css/main.addc4f74.css",
+    "main.js": "/landing_page/static/js/main.2ae3a33a.js",
+    "static/js/787.e0ee1374.chunk.js": "/landing_page/static/js/787.e0ee1374.chunk.js",
+    "static/media/top_div_img.jpg": "/landing_page/static/media/top_div_img.b089a07ac2973ddd5c02.jpg",
+    "static/media/Clean_kitchen.jpg": "/landing_page/static/media/Clean_kitchen.e7ff8a5599c76aa09e6a.jpg",
+    "static/media/CHAIR SHELVE.jpg": "/landing_page/static/media/CHAIR SHELVE.9abe91a3a2e6fa05cf7d.jpg",
+    "static/media/palour.jpg": "/landing_page/static/media/palour.d25c2344782f0cdc2e6e.jpg",
+    "static/media/CLEAN_ARRANGING.jpg": "/landing_page/static/media/CLEAN_ARRANGING.0401e931b24c9907da23.jpg",
+    "static/media/clean_dinning.jpeg": "/landing_page/static/media/clean_dinning.469386f8300a1c516f44.jpeg",
+    "static/media/cleaning_kitchen_sink.jpg": "/landing_page/static/media/cleaning_kitchen_sink.dc2db89ce2b1678dbfe1.jpg",
+    "static/media/room.jpg": "/landing_page/static/media/room.52b71e526e27c0d45413.jpg",
+    "static/media/Quality Clean2.png": "/landing_page/static/media/Quality Clean2.88b1074082124f3f8a29.png",
+    "static/media/cta-button-svg": "/landing_page/static/media/cta-button-487f725c7d7d0729437bd09dc6f9b120.487f725c7d7d0729437bd09dc6f9b120.svg",
+    "index.html": "/landing_page/index.html",
+    "main.addc4f74.css.map": "/landing_page/static/css/main.addc4f74.css.map",
+    "main.2ae3a33a.js.map": "/landing_page/static/js/main.2ae3a33a.js.map",
+    "787.e0ee1374.chunk.js.map": "/landing_page/static/js/787.e0ee1374.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.addc4f74.css",
+    "static/js/main.2ae3a33a.js"
+  ]
+}
