@@ -79,7 +79,7 @@ a{
   }
   section{
     p{
-      font-size: 20px;
+      font-size: 1rem;
       font-family: Outfit, sans-serif;
       line-height: 2;
       line-height: 2;
@@ -107,8 +107,9 @@ ul{
 }
 .image_in_between{
   height: 40%;
-  overflow: hidden;
+  /* overflow: hidden; */
   img{
+    position: relative;
     width: 100%;
     object-fit: contain;
   }
@@ -121,6 +122,7 @@ ul{
   top: 65px;
   left: 65px;
   margin-top: -50px;
+  z-index: 4;
 }
 
 a{
@@ -388,7 +390,6 @@ button.slick-arrow.slick-next{
   .top_div{
     h1{
       font-size: 3rem;
-
     }
     section{
       max-width: 85%;
@@ -399,8 +400,10 @@ button.slick-arrow.slick-next{
     object-fit: contain;
   }
   .image_in_between img{
+    position: relative;
+    left: 10%;
     width: 150%;
-    margin-inline: -50%;
+    margin-inline: -55%;
   }
 
   .roundsvg{
@@ -432,23 +435,24 @@ button.slick-arrow.slick-next{
   }
 
   .under_text_img{
-    
     align-items: flex-start;
-    div{
-      span{
-        font-size: 3rem;
-        padding-inline-end: 1rem;
-        min-width: 80px;
 
-      }
-      p{
-        font-size: medium;
-        text-wrap: balance;
-
-      }
-    }
   }
+  .under_text_img>div{
+    flex-direction: row;
+        
+  }
+  .under_text_img>div>span{
 
+    font-size: 3rem;
+    padding-inline-end: 1rem;
+    min-width: 80px;
+  }
+  .under_text_img>div>p{
+
+    font-size: medium;
+    text-wrap: balance;
+  }
 
 
   .tri_divs_after{

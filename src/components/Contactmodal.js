@@ -51,12 +51,12 @@ const Contactmodal = ({ isOpen, onClose, children }) => {
           
           <IconContext.Provider value={{ color: "chocolate", className: "global-class-name", size: "4rem"}} >
             <span className='cnt_us_icon' onClick={console.log('mail')}><a href='mailto:someone@example.com'><BiMailSend /></a></span> 
-            <span className='cnt_us_icon'><a href='http://wa.link/di5h5r'><BiLogoWhatsapp /></a></span> 
+            <span className='cnt_us_icon'><a href='whatsapp://send?phone=447590228369&text=Hi%20Quality%20Clean%2C%0A%0AI%20would%20like%20services%20with%20%E2%80%A6'><BiLogoWhatsapp /></a></span> 
             <span className='cnt_us_icon'><a href='tel:07590228369'><BiPhoneCall /></a></span> 
           </IconContext.Provider>
           {/* <input name='number' value={'07590228369'} disabled='true' /> */}
         </div>
-        {children}
+        {/* {children} */}
       </div>
     </>
   );

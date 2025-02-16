@@ -1,8 +1,5 @@
 import './App.css';
 import './swiper.css'
-// import Head from './components/head';
-// import Body from './components/body';
-// import Footer from './components/footer';
 import { ReactSVG } from "react-svg";
 // import mySvg from "./images/sitelogo.svg";
 import roundsvg from "./images/cta-button-487f725c7d7d0729437bd09dc6f9b120.svg";
@@ -13,6 +10,8 @@ import OurWorks from './components/OurWorks';
 import Footer from './components/Footer';
 import { useState } from 'react';
 import Contactmodal from './components/Contactmodal';
+import Numan from './components/Numan';
+import NumAnimate from './components/NumAnimate';
 
 
 function App() {
@@ -21,13 +20,10 @@ function App() {
     const [isModalOpen, setModalOpen] = useState(false);
     const onClose = () => {setModalOpen(false)}
     const HandleOpen = () => {
-        setModalOpen(true)}
-    // const mistyle = {"flex-grow": "1",
-    //   display: "flex",
-    //   "flex-direction": "column",
-    //   "align-items": "flex-start",
-    //   "justify-content": "space-around"
-    // }
+        setModalOpen(true)
+      }
+      
+
   return (
     <div className="App">
       <>
@@ -46,7 +42,7 @@ function App() {
         <body>
           <div className='top_div'>
             <h1>Come <span>home</span> to a clean enviroment</h1>
-            <section><p>We clean it all so you don't have to go through the stress, Making your comfort spaces even more comforting. Let save you the hussle by doing all the cleaning.</p></section>
+            <section><p>We clean it all so you don't have to go through the stress, Making your comfort spaces even more comforting. Let us save you the hassle—sit back and relax while we clean.</p></section>
           
           </div>
           <section className='image_in_between'><div className='roundsvg'><ReactSVG src={roundsvg} /></div><img src={require("./images/top_div_img.jpg")} alt='' /> </section>
@@ -62,6 +58,8 @@ function App() {
           <Services />
           <Pricing />
           <OurWorks onOpen={HandleOpen} />
+          <Numan /> 
+          <NumAnimate />
           
           <Footer />
 
