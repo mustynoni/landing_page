@@ -10,8 +10,7 @@ import OurWorks from './components/OurWorks';
 import Footer from './components/Footer';
 import { useState } from 'react';
 import Contactmodal from './components/Contactmodal';
-import Numan from './components/Numan';
-import NumAnimate from './components/NumAnimate';
+
 
 
 function App() {
@@ -58,8 +57,7 @@ function App() {
           <Services />
           <Pricing />
           <OurWorks onOpen={HandleOpen} />
-          <Numan /> 
-          <NumAnimate />
+
           
           <Footer />
 

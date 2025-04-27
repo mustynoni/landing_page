@@ -225,8 +225,11 @@ section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     span{
       font-size: 4rem;
+      display: flex;
+      align-items: center;
     }
     p{
       font-size: medium;
@@ -509,7 +512,6 @@ button.slick-arrow.slick-next{
   
     }
   .head_right{
-    background-color: red;
     border: 0rem;
   }
     .cnt_us_btn {

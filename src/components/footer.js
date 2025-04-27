@@ -23,7 +23,7 @@ const Footer = ()=>{
                 </ul>
             </section>
             <section className="fts3">
-                <h3>Service Availabilty Hours</h3>
+                <h3>Service Hours</h3>
                 <p>Weekdays 7:30 Am - 9:00 Pm</p>
                 <p>Weekends 7:00 Am - 8:00 Pm</p>
                 <p></p>
